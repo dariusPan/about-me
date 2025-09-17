@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Darius Jieming Pan — Personal Site</title>
+  <meta name="description" content="Minimal site for Darius Jieming Pan: interests, publications, projects, tools, fun." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #0f172a;
+      --muted: #475569;
+      --accent: #0ea5e9;
+      --card: #f8fafc;
+      --border: #e2e8f0;
+    }
+    [data-theme="dark"] {
+      --bg: #0b1020;
+      --fg: #e5e7eb;
+      --muted: #c7cdd6;
+      --accent: #38bdf8;
+      --card: #121a2f;
+      --border: #243045;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 24px 16px 64px;
+    }
+    header {
+      display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:24px;
+    }
+    .title { font-size: 1.75rem; font-weight: 700; letter-spacing: .2px; }
+    .muted { color: var(--muted); }
+    .row { display:flex; flex-wrap: wrap; gap: 16px; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 18px;
+    }
+    nav a {
+      color: var(--muted);
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 10px;
+    }
+    nav a:hover { background: var(--border); color: var(--fg); }
+    h2 { font-size: 1.3rem; margin: 28px 0 10px; }
+    h3 { font-size: 1.05rem; margin: 12px 0 6px; }
+    ul.clean, ol.clean { list-style: none; padding-left: 0; margin: 8px 0 0; }
+    .pub li + li, .proj li + li { margin-top: 10px; }
+    .pill {
+      display:inline-block; padding: 4px 10px; border:1px solid var(--border); border-radius:999px; margin:4px 6px 0 0; font-size: .9rem;
+    }
+    a.link { color: var(--accent); text-underline-offset:2px; }
+    a.link:hover { text-decoration: underline; }
+    footer { margin-top: 40px; font-size: .9rem; }
+    .toggle {
+      display:inline-flex; align-items:center; gap:8px; border:1px solid var(--border); background:var(--card);
+      padding:6px 10px; border-radius:999px; cursor:pointer; user-select:none;
+    }
+    .imggrid { display:grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 12px; margin-top: 10px; }
+    figure { margin:0; }
+    figure img { display:block; width:100%; height:auto; border-radius:12px; border:1px solid var(--border); }
+    figure figcaption { font-size:.9rem; color:var(--muted); margin-top:6px; }
+    .hero {
+      display:grid; grid-template-columns: 120px 1fr; gap: 18px; align-items:center; margin-bottom: 12px;
+    }
+    .avatar { width: 120px; height: 120px; border-radius: 12px; border:1px solid var(--border); background:var(--card); object-fit:cover; }
+    @media (max-width: 640px) { .hero { grid-template-columns: 1fr; } .avatar { width: 100%; height: auto; } }
+    .badge { font-size: .75rem; background: var(--border); color: var(--muted); padding: 2px 8px; border-radius: 999px; }
+  </style>
+  <script>
+    // Theme bootstrap before paint
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+      else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="title">Darius Jieming Pan</div>
+        <div class="muted">Data Engineering • Physics‑guided ML • Neuromorphic Computing • Synaptic Domain Transfer</div>
+      </div>
+      <button id="themeToggle" class="toggle" aria-label="Toggle dark mode">
+        <span>🌗</span><span class="muted">Theme</span>
+      </button>
+    </header>
+
+    <nav class="row" aria-label="Site">
+      <a href="#interests">Interests</a>
+      <a href="#publications">Publications</a>
+      <a href="#projects">Projects</a>
+      <a href="#tools">Tools</a>
+      <a href="#fun">Fun</a>
+    </nav>
+
+    <!-- HERO with image slot -->
+    <section class="card hero" aria-label="Intro">
+      <!-- EDIT: Replace images/profile.jpg with your own portrait (120x120+). -->
+      <img class="avatar" src="images/profile.jpg" alt="Portrait of Darius Jieming Pan" />
+      <div>
+        <p class="muted" style="margin:0">
+          Researcher at the National University of Singapore. I’m interested in building deep‑tech systems that bridge physics and data, and turning research into practical tools.
+        </p>
+        <div style="margin-top:8px">
+          <a class="link" href="https://scholar.google.com/citations?user=ppL11wkAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a> ·
+          <a class="link" href="https://github.com/dariusPan" target="_blank" rel="noreferrer">GitHub</a> ·
+          <a class="link" href="https://www.linkedin.com/in/darius-jieming-pan" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests">
+      <h2>Interests</h2>
+      <p class="muted">A few focus areas right now.</p>
+      <div class="row">
+        <span class="pill">Data Engineering</span>
+        <span class="pill">Physics‑guided ML</span>
+        <span class="pill">Neuromorphic Computing</span>
+        <span class="pill">Synaptic Domain Transfer</span>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications (selected)</h2>
+      <ol class="clean pub">
+        <li>
+          <strong>Quantile Online Learning for Semiconductor Failure Analysis</strong> — ICASSP 2023.
+          <a class="link" href="https://dblp.org/rec/journals/corr/abs-2303-07062" target="_blank" rel="noreferrer">arXiv/DBLP</a>
+        </li>
+        <li>
+          <strong>Significance of activation functions in developing an online classifier for semiconductor defect detection</strong> — <em>Knowledge‑Based Systems</em>, 2022.
+          <a class="link" href="https://doi.org/10.1016/j.knosys.2022.108818" target="_blank" rel="noreferrer">DOI</a>
+        </li>
+        <li>
+          <strong>A Wireless Multi‑Channel Capacitive Sensor System for Efficient Glove‑Based Gesture Recognition With AI at the Edge</strong> — <em>IEEE TCS II</em>, 2020.
+          <a class="link" href="https://dblp.org/rec/journals/tcas/PanLLTHT20" target="_blank" rel="noreferrer">DBLP</a>
+        </li>
+        <li>
+          <strong>Seal Integrity Testing Utilizing Non‑Destructive Capacitive Sensing for Product Packaging Assurance</strong> — <em>IEEE SENSORS</em>, 2020.
+          <a class="link" href="https://dblp.org/rec/conf/ieeesensors/PanLLZYWNTT20" target="_blank" rel="noreferrer">DBLP</a>
+        </li>
+      </ol>
+      <p class="muted" style="margin-top:8px">Full list: <a class="link" href="https://scholar.google.com/citations?user=ppL11wkAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a></p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul class="clean proj">
+        <li>
+          <a class="link" href="https://github.com/dariusPan/booking-bots" target="_blank" rel="noreferrer"><strong>booking-bots</strong></a> — Python + Selenium automation for scheduled booking tasks.
+        </li>
+        <li>
+          <a class="link" href="https://github.com/dariusPan/lab-bots" target="_blank" rel="noreferrer"><strong>lab-bots</strong></a> — Webcam‑based experiment monitor with GUI, ROI tools, and CSV logging.
+        </li>
+        <li>
+          <a class="link" href="https://github.com/dariusPan/digitisEverything" target="_blank" rel="noreferrer"><strong>digitisEverything</strong></a> — Local OCR webapp (Flask + Tesseract) for image‑to‑text digitization.
+        </li>
+        <li>
+          <a class="link" href="https://github.com/dariusPan/pdf-reader" target="_blank" rel="noreferrer"><strong>pdf-reader</strong></a> — Streamlit app to ask questions about a PDF via the OpenAI API.
+        </li>
+        <li>
+          <a class="link" href="https://github.com/dariusPan/stock" target="_blank" rel="noreferrer"><strong>stock</strong></a> — Utilities for serial I/O, data logging, and analysis.
+        </li>
+      </ul>
+
+      <!-- EDIT: Image strip for Projects.
+           Replace the three placeholders below; keep filenames and alt/figcaption updated. -->
+      <div class="imggrid">
+        <figure>
+          <img src="images/placeholder-1.jpg" alt="Screenshot of a lab monitoring UI" />
+          <figcaption>Project image 1 — <!-- EDIT: short caption --> </figcaption>
+        </figure>
+        <figure>
+          <img src="images/placeholder-2.jpg" alt="Example OCR output from digitisEverything" />
+          <figcaption>Project image 2 — <!-- EDIT: short caption --> </figcaption>
+        </figure>
+        <figure>
+          <img src="images/placeholder-3.jpg" alt="PDF Q&A app interface" />
+          <figcaption>Project image 3 — <!-- EDIT: short caption --> </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="tools">
+      <h2>Tools</h2>
+      <p class="muted">Things I reach for often.</p>
+      <div class="row">
+        <span class="pill">Python</span>
+        <span class="pill">OpenCV</span>
+        <span class="pill">Flask / Streamlit</span>
+        <span class="pill">Tkinter</span>
+        <span class="pill">Selenium</span>
+        <span class="pill">Tesseract OCR</span>
+        <span class="pill">VHDL / FPGA</span>
+        <span class="pill">GitHub Actions</span>
+      </div>
+    </section>
+
+    <section id="fun">
+      <h2>Fun</h2>
+      <p class="muted">Snapshots outside work.</p>
+      <!-- EDIT: Replace with your photos or notes. -->
+      <div class="imggrid">
+        <figure>
+          <img src="images/placeholder-4.jpg" alt="A calm outdoor scene" />
+          <figcaption>Weekend walks — <!-- EDIT: short caption --> </figcaption>
+        </figure>
+        <figure>
+          <img src="images/placeholder-5.jpg" alt="Coffee setup" />
+          <figcaption>Brewing experiments — <!-- EDIT: short caption --> </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <footer class="muted">
+      <span>Last updated Sep 17, 2025</span>
+    </footer>
+  </div>
+
+  <script>
+    const btn = document.getElementById('themeToggle');
+    btn.addEventListener('click', () => {
+      const cur = document.documentElement.getAttribute('data-theme');
+      const next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+    });
+  </script>
+</body>
+</html>
