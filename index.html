@@ -1,30 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Darius Jieming Pan — Personal Site</title>
-  <meta name="description" content="Clean, elegant personal site. <link rel="preload" href="assets/images/profile.jpg" as="image">
+  <meta name="description" content="Clean, elegant personal site for Darius Jieming Pan. Researcher at NUS bridging physics and data." />
+
+  <!-- Performance -->
+  <link rel="preload" href="assets/images/profile.jpg" as="image" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
+
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
     <div class="container">
       <div class="brand">
         <img src="assets/images/logo.svg" alt="" class="logo" aria-hidden="true">
-        <a href="/" class="brand-title">Live Life in Hard Mode</a>
+        <a href="#top" class="brand-title">Live Life in Hard Mode</a>
       </div>
+
       <nav class="site-nav" aria-label="Primary">
         <button id="themeToggle" class="toggle" aria-label="Toggle dark mode">
           <span aria-hidden="true">🌗</span><span class="toggle-label">Theme</span>
         </button>
-        <a href="#interests">Interests</a>
-        <a href="#publications">Publications</a>
-        <a href="#projects">Projects</a>
-        <a href="#tools">Tools</a>
-        <a href="#fun">Fun</a>
+        <a class="nav-link" href="#interests">Interests</a>
+        <a class="nav-link" href="#publications">Publications</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#tools">Tools</a>
+        <a class="nav-link" href="#fun">Fun</a>
       </nav>
+
       <div class="socials">
         <a class="icon" href="https://github.com/dariusPan" aria-label="GitHub" target="_blank" rel="noreferrer">
           <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.48 2 2 6.58 2 12.26c0 4.5 2.87 8.31 6.84 9.65.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.7-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.13-1.51-1.13-1.51-.93-.65.07-.64.07-.64 1.03.07 1.57 1.08 1.57 1.08.91 1.59 2.4 1.13 2.98.86.09-.67.36-1.12.65-1.38-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .85-.28 2.77 1.05a9.3 9.3 0 0 1 5.05 0c1.92-1.33 2.77-1.05 2.77-1.05.54 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.94-2.33 4.81-4.55 5.07.37.33.69.98.69 1.98 0 1.43-.01 2.58-.01 2.93 0 .27.18.58.69.48A10.03 10.03 0 0 0 22 12.26C22 6.58 17.52 2 12 2z"/></svg>
@@ -32,7 +40,7 @@
         <a class="icon" href="https://www.linkedin.com/in/darius-jieming-pan" aria-label="LinkedIn" target="_blank" rel="noreferrer">
           <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.94 8.9H4.07V20h2.87V8.9zM5.5 7.54a1.67 1.67 0 1 1 0-3.34 1.67 1.67 0 0 1 0 3.34zM20 20h-2.86v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.41-2.07 2.86V20H10.4V8.9h2.74v1.51h.04c.38-.73 1.3-1.5 2.67-1.5 2.86 0 3.39 1.88 3.39 4.33V20z"/></svg>
         </a>
-        <a class="icon" href="https://scholar.google.com/citations?user=ppL11wkAAAAJ&hl=en" aria-label="Scholar">
+        <a class="icon" href="https://scholar.google.com/citations?user=ppL11wkAAAAJ&hl=en" aria-label="Scholar" target="_blank" rel="noreferrer">
           <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
         </a>
       </div>
@@ -41,69 +49,70 @@
 
   <main id="main">
     <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-layout">
-        <div class="hero-layout" align-items="left">
-          <div>
-            <p class="eyebrow">Hey, my name is</p>
-            <div class="squiggle" aria-hidden="true"></div>
-            <h1 class="display">DARIUS<br>PAN</h1>
-            
-          </div>
-          <div class="squiggle" aria-hidden="true"></div>
-          <p class="role">Researcher at the National University of Singapore. I’m interested in building deep‑tech systems that bridge physics and data, and turning research into practical tools.</p>
+    <section class="hero section--tight" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Hey, my name is</p>
+          <h1 class="display-accent" style="font-size: 50px"> DARIUS</h1>
+          <p class="role">Researcher at the National University of Singapore. I’m interested in building deep-tech systems that bridge physics and data, and turning research into practical tools.</p>
+
           <div class="badges">
             <span class="badge">Data Engineering</span>
-            <span class="badge">Physics‑guided ML</span>
+            <span class="badge">Physics-guided ML</span>
             <span class="badge">Neuromorphic Computing</span>
             <span class="badge">Synaptic Domain Transfer</span>
           </div>
         </div>
-        
-        <dl class="hero-stats">
-          <img class="avatar" src="assets/images/profile.jpg" alt="Portrait of Darius Jieming Pan" />
-          <div class="stat">
-            <dt>Years of experience</dt>
-            <dd>10+</dd>
-          </div>
-          <div class="stat">
-            <dt>Projects done</dt>
-            <dd>399</dd>
-          </div>
-          <div class="stat">
-            <dt>Clients</dt>
-            <dd>89</dd>
-          </div>
-        </dl>
+
+        <div class="hero-visual">
+          <!-- <div class="backdrop" aria-hidden="true" style="width:480px;height:480px;"></div> -->
+          <img
+            class="avatar-round"
+            src="assets/images/profile.jpg"
+            alt="Portrait of Darius Jieming Pan"
+            style="width:330px;height:330px;"
+            loading="eager" decoding="async" />
+          <dl class="hero-stats" style="margin-top:50px">
+            <div class="stat">
+              <dt>Years of experience</dt>
+              <dd>10+</dd>
+            </div>
+            <div class="stat">
+              <dt>Projects done</dt>
+              <dd>399</dd>
+            </div>
+            <div class="stat">
+              <dt>Clients</dt>
+              <dd>89</dd>
+            </div>
+          </dl>
+        </div>
       </div>
+
+      <div class="section-divider" aria-hidden="true"></div>
     </section>
 
     <!-- INTERESTS -->
-    <section id="interests" class="section">
+    <section id="interests" class="section reveal">
       <div class="container">
         <h2>Interests</h2>
         <p class="muted">A few focus areas right now.</p>
-        <div class="row pills" id="interestsPills">
-          <!-- Static or generated pills -->
+        <div class="row pills">
           <span class="pill">Data Engineering</span>
-          <span class="pill">Physics‑guided ML</span>
+          <span class="pill">Physics-guided ML</span>
           <span class="pill">Neuromorphic Computing</span>
           <span class="pill">Synaptic Domain Transfer</span>
         </div>
       </div>
     </section>
+
     <!-- PUBLICATIONS (static HTML) -->
-    <section id="publications" class="section beve-pubs">
+    <section id="publications" class="section reveal beve-pubs">
       <div class="container">
         <h2>Selected Publications</h2>
         <ol class="pubs">
-          <!-- 1 -->
           <li class="pub">
-            <h3 class="pub-title">
-              <a target="_blank" rel="noreferrer" style="font-style: italic;">
-                Hybrid integration of wearable devices for physiological monitoring
-              </a>
-            </h3>
+            <h3 class="pub-title"><em>Hybrid integration of wearable devices for physiological monitoring</em></h3>
             <div class="pub-meta">
               <span class="pub-venue">Chemical Reviews</span>
               <span class="sep">•</span>
@@ -117,13 +126,8 @@
             </div>
           </li>
 
-          <!-- 2 -->
           <li class="pub">
-            <h3 class="pub-title">
-              <a target="_blank" rel="noreferrer" style="font-style: italic;">
-                Non-destructive online seal integrity inspection utilizing autoencoder-based electrical capacitance tomography for product packaging assurance
-              </a>
-            </h3>
+            <h3 class="pub-title"><em>Non-destructive online seal integrity inspection utilizing autoencoder-based electrical capacitance tomography for product packaging assurance</em></h3>
             <div class="pub-meta">
               <span class="pub-venue">Food Packaging and Shelf Life</span>
               <span class="sep">•</span>
@@ -137,21 +141,16 @@
             </div>
           </li>
 
-          <!-- 3 -->
           <li class="pub">
-            <h3 class="pub-title">
-              <a target="_blank" rel="noreferrer" style="font-style: italic;">
-                Hybrid-flexible bimodal sensing wearable glove system for complex hand gesture recognition
-              </a>
-            </h3>
+            <!-- FIXED: added missing </em> so italics don’t leak to the rest -->
+            <h3 class="pub-title"><em>Hybrid-flexible bimodal sensing wearable glove system for complex hand gesture recognition</em></h3>
             <div class="pub-meta">
-              <span class="pub-venue">ACS sensors</span>
+              <span class="pub-venue">ACS Sensors</span>
               <span class="sep">•</span>
               <span class="pub-year">2021</span>
             </div>
             <p class="pub-authors">
-              <strong>Pan, Jieming</strong>; Li, Yida; Luo, Yuxuan; Zhang, Xiangyu; Wang, Xinghua; Wong, David Liang Tai; Heng, Chun-Huat; Tham, Chen-Khong; Thean, Aaron Voon-Yew; 
-
+              <strong>Pan, Jieming</strong>; Li, Yida; Luo, Yuxuan; Zhang, Xiangyu; Wang, Xinghua; Wong, David Liang Tai; Heng, Chun-Huat; Tham, Chen-Khong; Thean, Aaron Voon-Yew
             </p>
             <div class="pub-actions">
               <a class="btn" href="https://pubs.acs.org/doi/abs/10.1021/acssensors.1c01698" target="_blank" rel="noreferrer">View paper</a>
@@ -162,56 +161,40 @@
     </section>
 
     <!-- PROJECTS (static HTML) -->
-    <section id="projects" class="section beve-projects">
+    <section id="projects" class="section reveal beve-projects">
       <div class="container">
         <h2>Selected Projects</h2>
-
         <ul class="proj-cards">
-          <!-- 1 -->
           <li class="proj">
             <figure class="thumb">
-              <img src="assets/images/placeholder-1.jpg" alt="Screenshot of booking automation bot UI">
+              <img src="assets/images/placeholder-1.jpg" alt="Screenshot of booking automation bot UI" loading="lazy" decoding="async">
             </figure>
             <div class="body">
-              <h3 class="title">
-                <a href="https://github.com/dariusPan/booking-bots" target="_blank" rel="noreferrer">booking-bots</a>
-              </h3>
+              <h3 class="title"><a href="https://github.com/dariusPan/booking-bots" target="_blank" rel="noreferrer">booking-bots</a></h3>
               <p class="desc">Python + Selenium automation for scheduled booking tasks.</p>
-              <div class="actions">
-                <a class="btn" href="https://github.com/dariusPan/booking-bots" target="_blank" rel="noreferrer">View repo</a>
-              </div>
+              <div class="actions"><a class="btn" href="https://github.com/dariusPan/booking-bots" target="_blank" rel="noreferrer">View repo</a></div>
             </div>
           </li>
 
-          <!-- 2 -->
           <li class="proj">
             <figure class="thumb">
-              <img src="assets/images/placeholder-2.jpg" alt="OCR web app interface">
+              <img src="assets/images/placeholder-2.jpg" alt="OCR web app interface" loading="lazy" decoding="async">
             </figure>
             <div class="body">
-              <h3 class="title">
-                <a href="https://github.com/dariusPan/digitisEverything" target="_blank" rel="noreferrer">digitisEverything</a>
-              </h3>
+              <h3 class="title"><a href="https://github.com/dariusPan/digitisEverything" target="_blank" rel="noreferrer">digitisEverything</a></h3>
               <p class="desc">Local OCR web app (Flask + Tesseract) for image-to-text digitization.</p>
-              <div class="actions">
-                <a class="btn" href="https://github.com/dariusPan/digitisEverything" target="_blank" rel="noreferrer">View repo</a>
-              </div>
+              <div class="actions"><a class="btn" href="https://github.com/dariusPan/digitisEverything" target="_blank" rel="noreferrer">View repo</a></div>
             </div>
           </li>
 
-          <!-- 3 -->
           <li class="proj">
             <figure class="thumb">
-              <img src="assets/images/placeholder-3.jpg" alt="PDF Q&A app interface">
+              <img src="assets/images/placeholder-3.jpg" alt="PDF Q&A app interface" loading="lazy" decoding="async">
             </figure>
             <div class="body">
-              <h3 class="title">
-                <a href="https://github.com/dariusPan/pdf-reader" target="_blank" rel="noreferrer">pdf-reader</a>
-              </h3>
+              <h3 class="title"><a href="https://github.com/dariusPan/pdf-reader" target="_blank" rel="noreferrer">pdf-reader</a></h3>
               <p class="desc">Ask questions about a PDF using a lightweight Streamlit front end.</p>
-              <div class="actions">
-                <a class="btn" href="https://github.com/dariusPan/pdf-reader" target="_blank" rel="noreferrer">View repo</a>
-              </div>
+              <div class="actions"><a class="btn" href="https://github.com/dariusPan/pdf-reader" target="_blank" rel="noreferrer">View repo</a></div>
             </div>
           </li>
         </ul>
@@ -219,32 +202,32 @@
     </section>
 
     <!-- TOOLS -->
-    <section id="tools" class="section">
+    <section id="tools" class="section reveal">
       <div class="container">
         <h2>Tools</h2>
         <p class="muted">Simple tools to tackle difficult tasks</p>
         <div class="row pills">
-          <a class="pill" href="https://github.com/dariusPan/digitisEverything">Extract text from image</a>
-          <a class="pill" href="https://github.com/dariusPan/lab-bots">Camera monitoring tool</a>
-          <a class="pill" href="https://cults3d.com/@pjmben">3D printing models</a>
-          <a class="pill" href="https://github.com/dariusPan/booking-bots">Facility booking bot</a>
-          <a class="pill" href="https://github.com/dariusPan/pdf-reader">PDF reader and condenser</a>
+          <a class="pill" href="https://github.com/dariusPan/digitisEverything" target="_blank" rel="noreferrer">Extract text from image</a>
+          <a class="pill" href="https://github.com/dariusPan/lab-bots" target="_blank" rel="noreferrer">Camera monitoring tool</a>
+          <a class="pill" href="https://cults3d.com/@pjmben" target="_blank" rel="noreferrer">3D printing models</a>
+          <a class="pill" href="https://github.com/dariusPan/booking-bots" target="_blank" rel="noreferrer">Facility booking bot</a>
+          <a class="pill" href="https://github.com/dariusPan/pdf-reader" target="_blank" rel="noreferrer">PDF reader and condenser</a>
         </div>
       </div>
     </section>
 
     <!-- FUN -->
-    <section id="fun" class="section">
+    <section id="fun" class="section reveal">
       <div class="container">
         <h2>Fun</h2>
         <p class="muted">Snapshots outside work.</p>
         <div class="imggrid">
           <figure>
-            <img src="assets/images/placeholder-4.jpg" alt="A calm outdoor scene" />
+            <img src="assets/images/placeholder-4.jpg" alt="A calm outdoor scene" loading="lazy" decoding="async" />
             <figcaption>Weekend walks — Replace with your own</figcaption>
           </figure>
           <figure>
-            <img src="assets/images/placeholder-5.jpg" alt="Coffee setup" />
+            <img src="assets/images/placeholder-5.jpg" alt="Coffee setup" loading="lazy" decoding="async" />
             <figcaption>Brewing experiments — Replace with your own</figcaption>
           </figure>
         </div>
@@ -258,28 +241,39 @@
     </div>
   </footer>
 
-<script>
-(() => {
-  // 1) Set initial theme (saved > OS preference)
-  const saved = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const theme = saved || (prefersDark ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-theme', theme);
+  <script>
+    // Theme: saved > OS preference
+    (function () {
+      const saved = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const theme = saved || (prefersDark ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+      document.addEventListener('DOMContentLoaded', () => {
+        const btn = document.getElementById('themeToggle');
+        if (btn) {
+          btn.setAttribute('aria-pressed', theme === 'dark');
+          btn.addEventListener('click', () => {
+            const cur = document.documentElement.getAttribute('data-theme');
+            const next = (cur === 'dark') ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            btn.setAttribute('aria-pressed', next === 'dark');
+          });
+        }
+      });
+    })();
 
-  // 2) Wire up the toggle button (id="themeToggle")
-  document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('themeToggle');
-    if (!btn) return;
-    btn.addEventListener('click', () => {
-      const cur = document.documentElement.getAttribute('data-theme');
-      const next = (cur === 'dark') ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-      // optional a11y: reflect pressed state
-      btn.setAttribute('aria-pressed', next === 'dark');
-    });
-  });
-})();
-</script>
+    // Active nav on scroll
+    (function () {
+      const links = Array.from(document.querySelectorAll('.nav-link'));
+      const sections = links.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+      if (!('IntersectionObserver' in window) || !sections.length) return;
+      const setActive = (id) => links.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === '#' + id));
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) setActive(entry.target.id); });
+      }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+      sections.forEach(s => observer.observe(s));
+    })();
+  </script>
 </body>
 </html>
