@@ -182,7 +182,7 @@ a { color: inherit; }
 
 /* Buttons (also used in publications + projects) */
 .btn {
-  background: var(--fg); color: #fff; text-decoration: none;
+  background: var(--fg); color: var(--card); text-decoration: none;
   padding: 8px 12px; border-radius: 12px; border: 1px solid var(--fg);
   transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
   font-style: normal;
